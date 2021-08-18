@@ -10,6 +10,6 @@ void main(){
     
     //printf("mensagem int : %s\n", mensagem(x));
     
-    printf("Aqui:%s\n", padding(mensagem(x)));
+    long long int* final =  schedule( padding( mensagem(x)));
 
 }
