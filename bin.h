@@ -5,3 +5,5 @@
 
 
 char* char_to_binary(char* s);
+
+char* bin_64bits(int l);

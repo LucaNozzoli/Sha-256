@@ -25,3 +25,22 @@ char* char_to_binary(char* s){
     return binary;
 
 }
+
+char* bin_64bits(long long unsigned int l){
+    
+
+    long long unsigned int k;	
+    char *binary = (char *)malloc(sizeof(char) * 64);
+    binary[0] = '\0';
+    for(long long int i = 63; i >= 0; i--){
+	
+	k = l >> i;
+    	if(k & 1)
+		strcat(binary, "1");
+	else
+		strcat(binary, "0");
+    
+    }
+    return binary;
+
+}
