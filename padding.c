@@ -4,9 +4,11 @@
 #include <unistd.h>
 #include "bin.h"
 
-unsigned char* padding(unsigned char* s){
+unsigned char* padding(char* s){
 
-    int l = strlen(s);
+    long int l = strlen(s);
+    printf("aqui!");
+    printf("len s: %ld", l);
     int k = (448 - l - 1) % 512 ;
  
     unsigned char *temp = (char*)malloc(sizeof(char)*448);
@@ -18,7 +20,10 @@ unsigned char* padding(unsigned char* s){
     strcat(final, s);
     strcat(final, temp);
     strcat(final, bin_64bits(l-2) ); 
-    
-
+    //for(int i =0; i<512; i++){
+	//	    printf("indice %d : %c\n", i, final[i]);
+	  //  }
+    //printf("%ld", strlen(final));
     return final;
+
 }
